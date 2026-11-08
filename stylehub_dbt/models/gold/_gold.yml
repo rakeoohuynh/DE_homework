@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: daily_revenue
+    description: Doanh thu theo ngày
+    columns:
+      - name: order_date
+        description: Ngày đặt hàng
+        data_type: 'datetime'

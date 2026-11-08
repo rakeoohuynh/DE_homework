@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: stylehub_bronze
+    schema: stylehub_airbyte_bronze
+    config:
+      loaded_at_field: _airbyte_extracted_at
+      freshness:
+        warn_after:
+          count: 1
+          period: day
+        error_after:
+          count: 3
+          period: day
+    tables:
+      - name: orders
+      - name: order_items
+      - name: products
+      - name: shipments
+      - name: users
+        config:
+          freshness: null

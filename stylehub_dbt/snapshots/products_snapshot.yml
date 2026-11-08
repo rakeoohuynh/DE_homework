@@ -1,0 +1,24 @@
+# BÀI TẬP 3: viết snapshot cho sản phẩm.
+# Bỏ dấu # ở khối dưới, điền các chỗ TODO.
+#
+ snapshots:
+   - name: products_snapshot
+     relation: ref('products_latest')
+     config:
+       unique_key: id
+       strategy: check
+       check_cols:
+         - cost
+         - category
+         - name
+         - brand
+         - retail_price
+         - department
+         - sku
+       updated_at: updated_at
+#       dbt_valid_to_current: "date('9999-12-31')"
+       snapshot_meta_column_names:
+         dbt_valid_from: valid_from
+         dbt_valid_to: valid_to
+         dbt_scd_id: scd_id
+         dbt_updated_at: snapshot_updated_at
