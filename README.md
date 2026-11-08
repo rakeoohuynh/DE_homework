@@ -48,7 +48,7 @@ Chạy SQL đã biên dịch (`target/compiled/stylehub_dbt/analyses/check_amoun
 
 `daily_revenue` đọc từ `fact_order_items`. `fact_order_items` đọc từ source `order_items`, `fact_orders` và `dim_products`.
 
-![Lineage daily_revenue](images/lineage.png)
+![Lineage daily_revenue](stylehub_dbt/images/lineage.png)
 
 ## Chạy project
 
